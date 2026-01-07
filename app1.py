@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import folium
+from streamlit_folium import st_folium
 
 st.title('Hier ist eine Testapp, welche Daten von Github nimmt und von allen Usern mit Link genutzt werden kann')
 
@@ -36,6 +37,7 @@ m = folium.Map(location=[47.04, 8.29], zoom_start=10, tiles=satellite, zoom_cont
 folium.Marker([47.12, 8.45], popup='Schweiz').add_to(m)
 
 st_data = st_folium(m, width = 700, height = 500)
+
 
 
 
