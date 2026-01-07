@@ -6,7 +6,7 @@ st.title('Hier ist eine Testapp, welche Daten von Github nimmt und von allen Use
 
 st.write('Wir laden zuerst ein einfaches JSON File rein, welches die BFS-Nummern und die entsprechenden Gemeindenamen enthält.')
 
-url = "https://raw.githubusercontent.com/mstorange/test_app/blob/main/BFSNummern_reversed.json"
+url = "https://raw.githubusercontent.com/mstorange/test_app/main/BFSNummern_reversed.json"
 df = pd.read_json(url)
 # df.head(3)
 st.table(df, border=True)
@@ -21,3 +21,4 @@ df_filtered = df[(df['bfsnr'] < oben) & (df['bfsnr'] >= unten)]
 
 
 st.table(df_filtered, border=True)
+
